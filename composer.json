@@ -1,0 +1,14 @@
+{
+    "name": "lucasmilin/mssql-abstract-layer",
+    "description": "MSSQL abstract layer for PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas MILIN",
+            "email": "lukas.milin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
