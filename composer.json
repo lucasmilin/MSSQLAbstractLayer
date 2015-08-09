@@ -1,6 +1,7 @@
 {
     "name": "lucasmilin/mssql-abstract-layer",
     "description": "MSSQL abstract layer for PHP",
+    "keywords": ["mssql", "sqlsrv"],
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -10,5 +11,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+      "php": ">=5.3.3"
+    }
 }
