@@ -87,7 +87,7 @@ class MSSQLConnector
      */
     public function query($sql)
     {
-        return $this->object->query($sql);
+        return $this->object->query($sql, $this->conn);
     }
 
     /**
