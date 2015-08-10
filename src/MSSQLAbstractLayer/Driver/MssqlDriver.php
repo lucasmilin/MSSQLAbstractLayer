@@ -51,7 +51,7 @@ class MssqlDriver
     /**
      * @param $stmt
      */
-    public function getResult($stmt)
+    public function getResults($stmt)
     {
         $result = array();
 
@@ -61,6 +61,17 @@ class MssqlDriver
 
         mssql_free_result($stmt);
 
+        return $result;
+    }
+
+    /**
+     * @param $stmt
+     */
+    public function getResult($stmt)
+    {
+        $result = mssql_fetch_assoc($stmt);
+
+        mssql_free_result($stmt);
 
         return $result;
     }

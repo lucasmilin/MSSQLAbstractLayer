@@ -90,12 +90,25 @@ class MSSQLConnector
         return $this->object->query($sql, $this->conn);
     }
 
+
     /**
-     * @param $sql
+     * @param $query
+     *
+     * @return array
      */
-    public function getResult($query)
+    public function fetch($query)
     {
         return $this->object->getResult($query);
+    }
+
+    /**
+     * @param $query
+     *
+     * @return array
+     */
+    public function fetchAll($query)
+    {
+        return $this->object->getResults($query);
     }
 
 }

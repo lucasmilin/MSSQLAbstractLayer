@@ -52,14 +52,20 @@ class SqlsrvDriver
     /**
      * @param $stmt
      */
-    public function getResult($stmt)
+    public function getResults($stmt)
     {
         $result = array();
 
         while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
             $result[] = $row;
-
         }
+
+        return $result;
+    }
+
+    public function getResult($stmt)
+    {
+        $result = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
 
         return $result;
     }
