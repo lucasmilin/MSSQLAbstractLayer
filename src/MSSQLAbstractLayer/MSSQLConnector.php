@@ -95,7 +95,7 @@ class MSSQLConnector
      */
     public function getResult($query)
     {
-        $this->object->getResult($query);
+        return $this->object->getResult($query);
     }
 
 }
