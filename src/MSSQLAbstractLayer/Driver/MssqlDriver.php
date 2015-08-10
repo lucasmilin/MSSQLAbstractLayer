@@ -26,7 +26,7 @@ class MssqlDriver
     {
         $conn = mssql_connect($server, $user, $password);
 
-        if (!conn){
+        if (!$conn){
             throw new \Exception('Unable to connect!');
         }
         if (!mssql_select_db($database, $conn)){
