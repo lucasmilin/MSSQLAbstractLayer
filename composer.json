@@ -1,22 +1,28 @@
 {
-    "name": "lucasmilin/mssql-abstract-layer",
-    "description": "MSSQL abstract layer for PHP",
-    "keywords": ["mssql", "sqlsrv"],
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Lucas MILIN",
-            "email": "lukas.milin@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=5.3.3"
-    },
-    "autoload": {
-        "psr-0": {
-            "MSSQLAbstractLayer": "src/"
-        }
+  "name": "lucasmilin/mssql-abstract-layer",
+  "description": "MSSQL abstract layer for PHP",
+  "keywords": ["mssql", "sqlsrv"],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lucas MILIN",
+      "email": "lukas.milin@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=5.3.3"
+  },
+  "autoload": {
+    "psr-0": {
+      "MSSQLAbstractLayer": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    }
+  }
 }
