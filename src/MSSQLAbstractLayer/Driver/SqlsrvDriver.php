@@ -69,4 +69,17 @@ class SqlsrvDriver
 
         return $result;
     }
+
+    /**
+     * @param $conn
+     *
+     * @return mixed
+     */
+    public function getLastInsertId($conn)
+    {
+        $stmt = sqlsrv_query($conn, 'SELECT SCOPE_IDENTITY() AS id');
+        $result = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+
+        return $result['id'];
+    }
 }

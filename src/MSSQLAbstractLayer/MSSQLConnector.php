@@ -111,4 +111,12 @@ class MSSQLConnector
         return $this->object->getResults($query);
     }
 
+    /**
+     * @return mixed
+     */
+    public function getLastInsertId()
+    {
+        return $this->object->getLastInsertId($this->conn);
+    }
+
 }
