@@ -75,4 +75,17 @@ class MssqlDriver
 
         return $result;
     }
+
+    /**
+     * @param $conn
+     *
+     * @return mixed
+     */
+    public function getLastInsertId($conn)
+    {
+        $stmt = mssql_query('SELECT SCOPE_IDENTITY() AS id', $conn);
+        $result = mssql_fetch_assoc($stmt);
+
+        return $result['id'];
+    }
 }
