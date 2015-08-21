@@ -15,6 +15,11 @@ namespace MSSQLAbstractLayer\Driver;
 class MssqlDriver
 {
     /**
+     * @var string
+     */
+    private $charset;
+
+    /**
      * @param $server
      * @param $database
      * @param $user
@@ -32,6 +37,9 @@ class MssqlDriver
         if (!mssql_select_db($database, $conn)){
             throw new \Exception('Unable to select database!');
         }
+
+        // Set charset
+        $this->charset = $charset;
 
         return $conn;
     }
