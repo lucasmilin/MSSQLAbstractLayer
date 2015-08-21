@@ -61,7 +61,7 @@ class MssqlDriver
 
         mssql_free_result($stmt);
 
-        if($this->charset == 'utf8'){
+        if($this->charset == 'UTF-8'){
             \MSSQLAbstractLayer\Helper\CharsetHelper::utf8Converter($result);
         }
 
@@ -77,7 +77,7 @@ class MssqlDriver
 
         mssql_free_result($stmt);
 
-        if($this->charset == 'utf8'){
+        if($this->charset == 'UTF-8'){
             \MSSQLAbstractLayer\Helper\CharsetHelper::utf8Converter($result);
         }
 
