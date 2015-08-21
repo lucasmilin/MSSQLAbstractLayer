@@ -61,6 +61,10 @@ class MssqlDriver
 
         mssql_free_result($stmt);
 
+        if($this->charset == 'utf8'){
+            \MSSQLAbstractLayer\Helper\CharsetHelper::utf8Converter($result);
+        }
+
         return $result;
     }
 
@@ -72,6 +76,10 @@ class MssqlDriver
         $result = mssql_fetch_assoc($stmt);
 
         mssql_free_result($stmt);
+
+        if($this->charset == 'utf8'){
+            \MSSQLAbstractLayer\Helper\CharsetHelper::utf8Converter($result);
+        }
 
         return $result;
     }
