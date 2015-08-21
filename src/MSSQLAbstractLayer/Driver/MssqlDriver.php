@@ -22,7 +22,7 @@ class MssqlDriver
      * @return false|resource
      * @throws \Exception
      */
-    public function connect($server, $database, $user, $password)
+    public function connect($server, $database, $user, $password, $charset = null)
     {
         $conn = mssql_connect($server, $user, $password);
 

@@ -21,9 +21,9 @@ class SqlsrvDriver
      * @return false|resource
      * @throws \Exception
      */
-    public function connect($server, $database, $user, $password)
+    public function connect($server, $database, $user, $password, $charset)
     {
-        $connectionInfo = array( "Database"=>$database, "UID"=>$user, "PWD"=>$password );
+        $connectionInfo = array( "Database"=>$database, "UID"=>$user, "PWD"=>$password, "CharacterSet" => $charset);
         $conn = sqlsrv_connect( $server, $connectionInfo);
 
         if( $conn === false ) {

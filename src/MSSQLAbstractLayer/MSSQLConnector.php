@@ -49,6 +49,11 @@ class MSSQLConnector
     /**
      * @var string
      */
+    private $charset;
+
+    /**
+     * @var string
+     */
     private $object;
 
     /**
@@ -58,13 +63,14 @@ class MSSQLConnector
      * @param $password
      * @param $driver
      */
-    public function __construct($server, $database, $user, $password, $driver)
+    public function __construct($server, $database, $user, $password, $driver, $charset)
     {
         $this->server = $server;
         $this->database = $database;
         $this->user = $user;
         $this->password = $password;
         $this->driver = $driver;
+        $this->charset = $charset;
 
         switch($this->driver) {
             case 'sqlsrv':
@@ -78,7 +84,7 @@ class MSSQLConnector
                 break;
         }
 
-        $this->conn = $this->object->connect($this->server, $this->database, $this->user, $this->password);
+        $this->conn = $this->object->connect($this->server, $this->database, $this->user, $this->password, $this->charset);
 
     }
 
